@@ -1,3 +1,18 @@
 def main():
+    print("나눗셈을 진행해보겠습니다. x와 y에 값을 입력해주세요.")
 
-def add():
+    x = int(input("x > "))
+    y = int(input("y > "))
+
+    divide(x, y)
+
+# divide() 함수 정의
+def divide(x, y):
+    try:
+        result = x / y
+        print("%0.3f" % result)
+    except ZeroDivisionError:
+        print("Error: cannot divide by zero.")
+
+if __name__ == "__main__":
+    main()
